@@ -5,7 +5,7 @@
 export default{
   name: '',
   components : {},
-  title: "Vue Basic",
+  title: "Vue를 재미있게 공부해봅시다!",
   data(){
     return{
 
