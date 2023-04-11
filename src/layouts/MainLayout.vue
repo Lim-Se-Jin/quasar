@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar-title>
         <q-btn
           flat
           dense
@@ -15,8 +15,13 @@
           Quasar App
         </q-toolbar-title>
 
+        <q-toolbar-title>
+          <q-btn to="/" label="Quasar App" class="text-subtitle1" unelevated></q-btn>
+        </q-toolbar-title>
+
+
         <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
+      </q-toolbar-title>
     </q-header>
 
     <q-drawer
@@ -91,7 +96,13 @@ const linksList = [
     caption: 'Community Quasar projects',
     icon: 'favorite',
     link: 'https://awesome.quasar.dev'
-  }
+  },
+  {
+    title: 'Vue 기초문법',
+    caption: 'Vue 핵심가이드',
+    icon: 'school',
+    link: '/vue'
+  },
 ]
 
 export default defineComponent({
