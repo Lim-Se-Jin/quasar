@@ -109,6 +109,12 @@ const linksList = [
     icon: 'code',
     link: '/shop'
   },
+  {
+    title: 'todo',
+    caption : 'vue + stort 실습',
+    icon : 'home',
+    link : '/todo'
+  },
 ]
 
 export default defineComponent({
