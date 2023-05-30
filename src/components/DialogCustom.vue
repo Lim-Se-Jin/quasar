@@ -6,21 +6,14 @@
         <div class="text-subtitle2">{{ editTask.id }}</div>
       </q-card-section>
       <q-card-section>
-        <q-input
-        v-model="editTask.title"
-        @keyup.enter="onOKClick"
-        ></q-input>
+        <q-input v-model="editTask.title" @keyup.enter="onOKClick"></q-input>
       </q-card-section>
+
+      <!-- <slot /> -->
 
       <!-- buttons example -->
       <q-card-actions align="right">
-        <q-btn
-          color="primary"
-          unelevated
-          dense
-          label="OK"
-          @click="onOKClick"
-          />
+        <q-btn color="primary" unelevated dense label="OK" @click="onOKClick" />
         <q-btn
           unelevated
           dense
@@ -34,33 +27,29 @@
 </template>
 
 <script>
-
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
   name: "DialogCustom",
-  props: ['editTask', 'origin'],
-  emits: ['onInput'],
+  props: ["editTask", "origin"],
+  emits: ["onInput"],
   data() {
     return {
       dialog: false,
     };
   },
-  mounted(){
-  },
-  watch:{
-  },
-  watch:{
-  },
-  methods:{
-    onOKClick(){
-      this.$emit('onInput', this.editTask);
+  mounted() {},
+  watch: {},
+  methods: {
+    onOKClick() {
+      if (!this.editTask.title) this.editTask.title = this.origin;
+      this.$emit("onInput", this.editTask);
       this.dialog = false;
     },
-    onCancelClick(){
-      this.editTask.title = this.origin,
-      this.dialog = false;
+    onCancelClick() {
+      (this.editTask.title = this.origin), (this.dialog = false);
     },
   },
-};
+});
 </script>
 
 <style></style>

@@ -68,7 +68,6 @@
 </template>
 
 <script>
-import { onMounted } from 'vue';
 import useTodoStore from '/src/stores/todo';
 import { mapActions, mapState } from 'pinia';
 import DialogCustom from "components/DialogCustom.vue"
@@ -92,6 +91,7 @@ export default{
   },
   methods:{
     ...mapActions(useTodoStore, ["insertTodo", "removeTodo","listTodo","editTodo"]),
+    //추가
     async addTask(){
       if(this.newTask){
         //store action 저장
