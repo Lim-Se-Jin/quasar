@@ -24,3 +24,4 @@ quasar build
 See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js).
 # quasar1
 # vue
+# quasar
