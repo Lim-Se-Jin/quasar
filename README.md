@@ -25,3 +25,4 @@ See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-webpack/quas
 # quasar1
 # vue
 # quasar
+# quasar
